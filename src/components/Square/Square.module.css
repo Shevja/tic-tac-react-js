@@ -1,0 +1,20 @@
+.square {
+    border: 1px solid white;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    transition: background-color .2s;
+}
+
+.square:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.square.square_x {
+    background: var(--tic-color);
+}
+
+.square.square_o {
+    background: var(--tac-color);
+}

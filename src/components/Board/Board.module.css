@@ -1,0 +1,5 @@
+.board {
+    display: grid;
+    outline: 1px solid var(--secondary-color);
+    outline-offset: -1px;
+}

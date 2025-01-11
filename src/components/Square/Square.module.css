@@ -1,8 +1,13 @@
 .square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid white;
     width: 5rem;
     height: 5rem;
     background-color: transparent;
+    user-select: none;
+    font-size: 2.5rem;
     transition: background-color .2s;
 }
 
@@ -11,10 +16,23 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.square.square_x {
+.square_faded {
+    filter: brightness(.5);
+}
+
+.square_x {
     background: var(--tic-color);
 }
 
-.square.square_o {
+.square_o {
     background: var(--tac-color);
 }
+
+.square_x:hover {
+    cursor: default;
+    background: var(--tic-color);
+}
+.square_o:hover {
+    cursor: default;
+    background: var(--tac-color);
+} 

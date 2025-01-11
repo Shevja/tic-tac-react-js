@@ -2,7 +2,7 @@ import React from "react";
 import Square from "../Square/Square"
 import styles from './Board.module.css'
 
-function Board({ squares, onClick }) {
+function Board({ squares, gameOver, highlightSquares, onClick }) {
     const gridSize = Math.sqrt(squares.length)
 
     return (
@@ -13,7 +13,12 @@ function Board({ squares, onClick }) {
             }}
         >
             {squares.map((value, index) => (
-                <Square key={index} value={value} onClick={() => onClick(index)} />
+                <Square
+                    key={index}
+                    value={value}
+                    isHighlight={!gameOver || (highlightSquares && highlightSquares.includes(index))}
+                    onClick={gameOver ? null : () => onClick(index)}
+                />
             ))}
         </div>
     );
